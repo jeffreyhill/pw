@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+    <title>PW</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<style>
+    @font-face {
+        font-family: "Gotham Rounded Medium";
+        src: url("/fonts/GothamRounded-Medium.otf") format("opentype"),
+        url("/fonts/GothamRoundedMedium_21022.ttf") format("truetype");
+    }
+
+    @font-face {
+        font-family: "Gotham Rounded Book";
+        src: url("/fonts/GothamRounded-Book.otf") format("opentype"),
+        url("/fonts/GothamRoundedBook_21018.ttf") format("truetype");
+    }
+
+    :root {
+        --wp-dark-grey: #4A4A4A;
+        --wp-text-grey: #55565A;
+
+        --wp-gotham-rounded-medium: "Gotham Rounded Medium", "sans-serif";
+        --wp-gotham-rounded-book: "Gotham Rounded Book", "sans-serif";
+        --wp-header-margin: min(6.171%, 79px);
+        --wp-font-size-body: 18px;
+        --wp-font-size-header: 30px;
+        --wp-letter-spacing-header: 0.99px;
+        --wp-letter-spacing-body: 0.59px;
+        --wp-line-height-body: 2.16em;
+        --wp-line-height-header: 1.2em;
+        --wp-text-transform-uppercase: uppercase;
+    }
+
+    .why-polywood {
+        margin: 0 auto;
+        flex-direction: row;
+        max-width: 1280px;
+    }
+
+    .why-polywood .header-text {
+        display: flex;
+        flex-direction: row;
+        font-family: var(--wp-gotham-rounded-medium);
+        font-size: var(--wp-font-size-header);
+        line-height: var(--wp-line-height-header);
+        letter-spacing: var(--wp-letter-spacing-header);
+        color: var(--wp-dark-grey);
+        text-transform: var(--wp-text-transform-uppercase);
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .why-polywood .header-text:after, .why-polywood .header-text:before {
+        content: "";
+        flex: 1 1;
+        border-bottom: 1px solid var(--wp-dark-grey);
+        margin: auto;
+    }
+
+    .why-polywood .header-text:before {
+        margin-right: var(--wp-header-margin);
+    }
+
+    .why-polywood .header-text:after {
+        margin-left: var(--wp-header-margin);
+    }
+
+    .why-polywood .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why-polywood .container-img {
+        text-align: center;
+    }
+
+    .why-polywood img {
+        align-self: center;
+        margin-top: 42px;
+        max-width: 100%;
+    }
+
+    .why-polywood .bodycopy-text {
+        color: var(--wp-text-grey);
+        font-family: var(--wp-gotham-rounded-book);
+        font-size: var(--wp-font-size-body);
+        line-height: var(--wp-line-height-body);
+        letter-spacing: var(--wp-letter-spacing-body);
+    }
+
+    .why-polywood .bodycopy-text a {
+        color: var(--wp-text-grey);
+    }
+
+    .why-polywood .bodycopy-text p {
+        margin: 28px 0 28px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .why-polywood .wrapper {
+            flex-direction: row;
+        }
+
+        .why-polywood img {
+            max-width: none;
+        }
+
+        .why-polywood .bodycopy-text {
+            margin-top: 59px;
+            margin-right: 28px;
+        }
+
+        .why-polywood .bodycopy-text p {
+            margin: 0 0 var(--wp-line-height-body);
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+        .why-polywood .container-img {
+            width: 33.333%;
+        }
+
+        .why-polywood img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .why-polywood .bodycopy-text {
+            width: 66.67%;
+            margin-left: 30px;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        .why-polywood img {
+            width: 426px;
+            height: 515px;
+            margin-right: 39.5px;
+            margin-bottom: 79px;
+        }
+    }
+</style>
+
+<div class="why-polywood">
+    <div class="header-text">Why Polywood?</div>
+    <div class="wrapper">
+        <div class="container-img">
+            <img src="images/PWS433-1-WH-LI.png" alt="Polywood table"/>
+        </div>
+        <div class="bodycopy-text">
+            <p>
+                POLYWOOD outdoor dining sets are designed with your family in mind. We've created  durable outdoor
+                dining tables and chairs that coordinate perfectly to make sets that can continually meet the dining
+                demands and style preferences of any household. Whether you have a large family and favor a
+                <a href="#">9-piece outdoor dining set</a> or <a href="#">7-piece outdoor dining set</a> with a rustic
+                farmhouse design or have a smaller family with more contemporary tastes and desire a 5-piece outdoor
+                dining set, there's a curated outdoor dining set perfect for you.
+            </p>
+            <p>
+                Our modern outdoor dining sets are not only stylish&mdash;they're sustainable too! All of our outdoor
+                dining table and chairs are constructed from genuine POLYWOOD lumber, a durable material made using
+                recycled ocean-bound and landfill-bound high-density polyethylene (HDPE) plastic. Our HDPE lumber is
+                low-maintenance, easy to clean, can handle any outdoor climate, and keeps our planet healthy.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
