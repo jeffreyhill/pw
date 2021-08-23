@@ -2,158 +2,22 @@
 <head>
     <title>PW</title>
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 <body>
-<style>
-    @font-face {
-        font-family: "Gotham Rounded Medium";
-        src: url("/fonts/GothamRounded-Medium.otf") format("opentype"),
-        url("/fonts/GothamRoundedMedium_21022.ttf") format("truetype");
-    }
 
-    @font-face {
-        font-family: "Gotham Rounded Book";
-        src: url("/fonts/GothamRounded-Book.otf") format("opentype"),
-        url("/fonts/GothamRoundedBook_21018.ttf") format("truetype");
-    }
-
-    :root {
-        --wp-dark-grey: #4A4A4A;
-        --wp-text-grey: #55565A;
-
-        --wp-gotham-rounded-medium: "Gotham Rounded Medium", "sans-serif";
-        --wp-gotham-rounded-book: "Gotham Rounded Book", "sans-serif";
-        --wp-header-margin: min(6.171%, 79px);
-        --wp-font-size-body: 18px;
-        --wp-font-size-header: 30px;
-        --wp-letter-spacing-header: 0.99px;
-        --wp-letter-spacing-body: 0.59px;
-        --wp-line-height-body: 2.16em;
-        --wp-line-height-header: 1.2em;
-        --wp-text-transform-uppercase: uppercase;
-    }
-
-    .why-polywood {
-        margin: 0 auto;
-        flex-direction: row;
-        max-width: 1280px;
-    }
-
-    .why-polywood .header-text {
-        display: flex;
-        flex-direction: row;
-        font-family: var(--wp-gotham-rounded-medium);
-        font-size: var(--wp-font-size-header);
-        line-height: var(--wp-line-height-header);
-        letter-spacing: var(--wp-letter-spacing-header);
-        color: var(--wp-dark-grey);
-        text-transform: var(--wp-text-transform-uppercase);
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
-
-    .why-polywood .header-text:after, .why-polywood .header-text:before {
-        content: "";
-        flex: 1 1;
-        border-bottom: 1px solid var(--wp-dark-grey);
-        margin: auto;
-    }
-
-    .why-polywood .header-text:before {
-        margin-right: var(--wp-header-margin);
-    }
-
-    .why-polywood .header-text:after {
-        margin-left: var(--wp-header-margin);
-    }
-
-    .why-polywood .wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .why-polywood .container-img {
-        text-align: center;
-    }
-
-    .why-polywood img {
-        align-self: center;
-        margin-top: 42px;
-        max-width: 100%;
-    }
-
-    .why-polywood .bodycopy-text {
-        color: var(--wp-text-grey);
-        font-family: var(--wp-gotham-rounded-book);
-        font-size: var(--wp-font-size-body);
-        line-height: var(--wp-line-height-body);
-        letter-spacing: var(--wp-letter-spacing-body);
-    }
-
-    .why-polywood .bodycopy-text a {
-        color: var(--wp-text-grey);
-    }
-
-    .why-polywood .bodycopy-text p {
-        margin: 28px 0 28px;
-    }
-
-    @media screen and (min-width: 768px) {
-        .why-polywood .wrapper {
-            flex-direction: row;
-        }
-
-        .why-polywood img {
-            max-width: none;
-        }
-
-        .why-polywood .bodycopy-text {
-            margin-top: 59px;
-            margin-right: 28px;
-        }
-
-        .why-polywood .bodycopy-text p {
-            margin: 0 0 var(--wp-line-height-body);
-        }
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
-        .why-polywood .container-img {
-            width: 33.333%;
-        }
-
-        .why-polywood img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .why-polywood .bodycopy-text {
-            width: 66.67%;
-            margin-left: 30px;
-        }
-    }
-
-    @media screen and (min-width: 1280px) {
-        .why-polywood img {
-            width: 426px;
-            height: 515px;
-            margin-right: 39.5px;
-            margin-bottom: 79px;
-        }
-    }
-</style>
-
-<div class="why-polywood">
-    <div class="header-text">Why Polywood?</div>
-    <div class="wrapper">
-        <div class="container-img">
-            <img src="images/PWS433-1-WH-LI.png" alt="Polywood table"/>
+<section class="content xl:container overview">
+    <h2 class="header-text">Why Polywood?</h2>
+    <div class="wrapper flex flex-col md:flex-row">
+        <div class="flex-none">
+            <img src="images/PWS433-1-WH-LI.png" alt="Polywood Outdoor Set" />
         </div>
-        <div class="bodycopy-text">
+        <div class="bodycopy-text flex-grow">
             <p>
-                POLYWOOD outdoor dining sets are designed with your family in mind. We've created  durable outdoor
+                POLYWOOD outdoor dining sets are designed with your family in mind. We've created durable outdoor
                 dining tables and chairs that coordinate perfectly to make sets that can continually meet the dining
                 demands and style preferences of any household. Whether you have a large family and favor a
                 <a href="#">9-piece outdoor dining set</a> or <a href="#">7-piece outdoor dining set</a> with a rustic
@@ -168,6 +32,307 @@
             </p>
         </div>
     </div>
-</div>
+</section>
+
+<section class="content xl:container inset testimonial">
+    <div class="wrapper flex flex-col lg:flex-row">
+        <div class="quote centered flex-grow">
+            <div class="quote-text">
+                <p>&ldquo;The customer service is excellent. I would receive an email throughout, giving me the status.
+                    Then I needed to change my delivery address and the lady who helped me was prompt and efficient
+                    and very kind. I would recommend this product to anyone who wants too quality and professional service.
+                    Thank you!&rdquo;
+            </div>
+            <div class="quote-author">
+                &mdash; D A
+            </div>
+            <div class="quote-subject">
+                La Casa Caf&eacute; 5-Piece Dining Set - PWS132-1
+            </div>
+        </div>
+
+        <div class="img-container flex-none">
+            <img src="images/PWS121-1-GY-LI-1.png" />
+        </div>
+    </div>
+</section>
+
+<section class="content xl:container features">
+    <h2 class="header-text">Outdoor Dining Set Features</h2>
+    <div class="wrapper grid lg:grid-cols-2 lg:grid-rows-2 sm:grid-cols-1 lg:gap-16">
+        <div class="centered">
+            <img class="centered icon" src="images/icons/WeatherResistance-White-1.png"/>
+            <h3 class="sub-header-text">Weather Resistance</h3>
+            <p>Our genuine POLYWOOD lumber can handle all types of weather from hot desert heat to the most frigid blizzards.</p>
+        </div>
+        <div class="centered">
+            <img class="centered icon" src="images/icons/LowMaintenance-White.png"/>
+            <h3 class="sub-header-text">Low Maintenance</h3>
+            <p>All POLYWOOD furniture is easy to clean and never needs to be painted, stained, or waterproofed.</p>
+        </div>
+        <div class="centered">
+            <img class="centered icon" src="images/icons/path16.png"/>
+            <h3 class="sub-header-text">Durability</h3>
+            <p>We proudly back our genuine POLYWOOD lumber with a 20-year residential warranty.</p>
+        </div>
+        <div class="centered">
+            <img class="centered icon" src="images/icons/Recycled-White.png"/>
+            <h3 class="sub-header-text">Sustainability</h3>
+            <p>We give ocean-bound and landfill-bound plastic containers a second life by recycling them into our genuine POLYWOOD lumber.</p>
+        </div>
+    </div>
+</section>
+
+<section class="content xl:container faqs">
+    <h2 class="header-text">Dining Set FAQs</h2>
+    <div class="wrapper">
+        <div>
+            <dl class="accordion">
+                <dt>Can you leave POLYWOOD dining sets outside all year long?<button></button></dt>
+                <dd>POLYWOOD furniture is built to live outdoors in every season. You can leave it outside all year long and can trust that it won't get damaged by harsh weather or environmental stressors.</dd>
+                <dt>Can you mix and match chairs and tables to make your own POLYWOOD dining set?<button></button></dt>
+                <dd></dd>
+                <dt>What is the weight capacity for chairs in the POLYWOOD dining sets?<button></button></dt>
+                <dd></dd>
+                <dt>Do the tables in POLYWOOD dining sets come with holes for umbrellas?<button></button></dt>
+                <dd></dd>
+                <dt>How do you remove the center plug from a dining table to reveal the umbrella hole?<button></button></dt>
+                <dd></dd>
+                <dt>Are POLYWOOD dining sets easy to clean?<button></button></dt>
+                <dd></dd>
+                <dt>Can you paint or stain POLYWOOD dining sets?<button></button></dt>
+                <dd></dd>
+                <dt>Can you fit more chairs around POLYWOOD dining tables than the number of chairs the set comes with?<button></button></dt>
+                <dd></dd>
+                <dt>What seat cushions fit POLYWOOD dining chairs?<button></button></dt>
+                <dd></dd>
+            </dl>
+        </div>
+    </div>
+</section>
+
+<section class="content xl:container inset testimonial">
+    <img class="lg:float-left lg:pr-10 centered" src="images/edge-7-piece-dining-set-review.png" height="235" width="235" />
+    <div class="quote centered">
+        <div class="quote-text">
+            <p>&ldquo;Looks fantastic. Love the modern lines. Had my first socially distanced gathering and it was
+                perfect. Easy to assemble table BUT very heavy. Definitely a two person job to move the table.&rdquo;
+        </div>
+        <div class="quote-author">
+            &mdash; F I
+        </div>
+        <div class="quote-subject">
+            EDGE 7-Piece Dining Set - PWS552-1
+        </div>
+    </div>
+</section>
+
+<section class="content xl:container colors">
+    <h2 class="header-text">Outdoor Dining Set Colors</h2>
+    <div class="wrapper">
+        <div class="bodycopy-text centered">
+            <p>Choose from a variety of vivid, long-lasting colors so you can have a dining set that coordinates perfectly with your outdoor decor whether you want an inviting white outdoor dining set, a cool slate grey outdoor dining set, or a bold black outdoor dining set. We use light-stable pigments, stabilizers, and UV inhibitors in our lumber to ensure the color and integrity of the product is protected against outdoor elements.</p>
+        </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-20">
+        <div class="col-auto">
+            <img src="images/white.png" height="291" width="364"/>
+            <button class="white cta">
+                <a href="#">Shop White Dining Sets</a>
+            </button>
+        </div>
+        <div class="col-auto">
+            <img src="images/PWS260-1-GY-ST.png" height="292" width="412"/>
+            <button class="grey cta">
+                <a href="#">Shop Slate Grey Dining Sets</a>
+            </button>
+        </div>
+        <div class="col-auto">
+            <img src="images/PWS340-1-BL-ST.png" height="291" width="364"/>
+            <button class="black cta">
+                <a href="#">Shop Black Dining Sets</a>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="swatch-set">
+            <img class="centered" src="images/Repeat Grid 34.png" />
+        </div>
+    </div>
+    <div class="row centered">
+        <button class="inverse rounded-sm">
+            <a href="#">Learn More About Our Colors</a>
+        </button>
+    </div>
+</section>
+
+<section class="content xl:container ideas">
+    <h2 class="header-text">Where to Enjoy Your Outdoor Dining Sets</h2>
+    <div class="wrapper grid lg:grid-cols-3 gap-14">
+        <div class="col-auto">
+            <img src="images/PWS121-1-GY-LI-1.png" height="298" width="397"/>
+            <div class="sub-header-text">On the Patio</div>
+            <p>The perks of <a href="#">patio dining</a> are plentiful, and using one of our patio dining sets, such as the <a href="#">Chippendale 7-Piece Dining Set</a>, in your space is one of them.</p>
+        </div>
+        <div class="col-auto">
+            <img src="images/PWS261-1-WH-LI-1.png" height="298" width="397"/>
+            <div class="sub-header-text">By the Pool</div>
+            <p>Mixing margaritas can be even more enjoyable when you sit back and relax in one of our bar sets poolside such as the <a href="#">Palm Coast 5-Piece Bar Set.</a></p>
+        </div>
+        <div class="col-auto">
+            <img src="images/PWS156-1-SA902-LI-1.png" height="298" width="397"/>
+            <div class="sub-header-text">On the Front Porch</div>
+            <p>A cozy spot on your porch can fit a smaller dining set, such as the <a href="#">Coastal 3-Piece Bar Set</a>, so you can enjoy an intimate meal with your friends.</div>
+        </div>
+    </div>
+</section>
+
+<section class="content xl:container types">
+    <h2 class="header-text">Types of Outdoor Dining Sets</h2>
+    <div class="wrapper grid sm:grid-cols-1 lg:grid-cols-2 gap-16">
+
+        <div class="col-auto">
+            <img class="centered" src="images/PWS374-1-VWH-UMB-LI.png" height="224" width="280"/>
+        </div>
+        <div class="col-auto">
+            <div class="subheader">Outdoor Dining Set with Umbrella</div>
+            <p class="bodycopy-text">Need a bit of shade while you enjoy Sunday brunch? Invest in an outdoor dining set with an umbrella. Many POLYWOOD tables in our dining sets come with a 1.625" center hole for a standard umbrella, such as the <a href="#">Nautical Adirondack 7-Piece Trestle Dining Set</a>. We even offer umbrellas in multiple colors so you can pick one that complements your outdoor dining set.</p>
+        </div>
+
+        <div class="col-auto">
+            <img class="centered" src="images/PWS122-1-WH-LI-1 (1).png" height="224" width="280"/>
+        </div>
+        <div class="col-auto">
+            <div class="subheader">Round Outdoor Dining Sets</div>
+            <p class="bodycopy-text">If you have a smaller space, a round outdoor dining table set like the <a href="#">Chippendale 5-Piece Round Arm Chair Dining Set</a> will meet your needs as it takes up less room than a square or rectangular dining set. Our round outdoor dining sets will allow you to create an intimate dining experience that you can enjoy season after season.</p>
+        </div>
+
+        <div class="col-auto">
+            <img class="centered" src="images/PWS379-1-TE-SI-9.png" height="223" width="280"/>
+        </div>
+        <div class="col-auto">
+            <div class="subheader">Bar-Height Outdoor Dining Set</div>
+            <p class="bodycopy-text">If you have an outdoor bar, you can bring additional style to the setting with a bar-height outdoor dining set or counter-height outdoor dining set. Our bar- and counter-height sets are perfect seating options for when you want to maximize your space and comfort.</p>
+        </div>
+
+        <div class="col-auto">
+            <img class="centered" src="images/PWS508-1-VSH-LI (1).png" height="224" width="280"/>
+        </div>
+        <div class="col-auto">
+            <div class="subheader">Outdoor Dining Set with Bench</div>
+            <p class="bodycopy-text">If you have an outdoor bar, you can bring additional style to the setting with a <a href="#">bar-height outdoor dining set</a>, such as the <a href="#">Vineyard Curveback Adirondack 5-Piece Nautical Trestle Bar Set</a>, or counter-height outdoor dining set. Our bar- and counter-height sets are perfect seating options for when you want to maximize your space and comfort.</p>
+        </div>
+
+        <div class="col-auto">
+            <img class="centered" src="images/PWS132-1-WH-LI-2.png" height="224" width="280"/>
+        </div>
+        <div class="col-auto">
+            <div class="subheader">Small Outdoor Dining Set</div>
+            <p class="bodycopy-text">If you have fewer people to seat, a small outdoor table and chairs set, such as the <a href="">La Casa Caf&eacute; 5-Piece Dining Set</a>, is just what you need. With our small outdoor dining sets, you can entertain small groups in any season.</p>
+        </div>
+
+        <div class="col-auto">
+            <img class="centered" src="images/PWS153-1-GY-LI-1 (2).png" height="223" width="280"/>
+        </div>
+        <div class="col-auto">
+            <div class="subheader">Outdoor Bistro Dining Set</div>
+            <p class="bodycopy-text">If you have fewer people to seat, a small outdoor table and chairs set, such as the <a href="">La Casa Caf&eacute; 5-Piece Dining Set</a>, is just what you need. With our small outdoor dining sets, you can entertain small groups in any season.</p>
+        </div>
+    </div>
+
+    <div class="row centered">
+        <button class="inverse rounded-sm">
+            <a href="#">Shop All Dining Sets</a>
+        </button>
+    </div>
+</section>
+
+<section class="content xl:container image-inset selection">
+    <div class="wrapper">
+        <h2 class="header-text">Choose The Perfect Dining Set For Your Space</h2>
+        <div class="sub-header-text centered">Take a look at our blog and pick out an outdoor dining set that will meet your entertaining needs!</div>
+        <div class="row centered">
+            <button class="inverse rounded-sm">
+                <a href="#">Click here to view our blog</a>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="content xl:container reviews">
+    <h2 class="header-text">Furniture Reviews</h2>
+    <div class="wrapper">
+        <div class="sub-header-text centered">We love a good review! Check out what other customers are saying below:</div>
+        <div class="slider">
+            <div class="frame flex flex-row">
+                <div class="frame-img flex-none">
+                    <img src="images/lakeside-7-piece-farmhouse-dining-set-review.png" height="125" width="125"/>
+                </div>
+                <div class="frame-content">
+                    <div class="frame-stars"></div>
+                    <div class="frame-title">Great set!</div>
+                    <div class="frame-text">We enjoy the outdoor dining set!</div>
+                    <div class="frame-author">- Alisha J</div>
+                </div>
+            </div>
+            <div class="frame flex flex-row">
+                <div class="frame-img flex-none">
+                    <img src="images/vineyard-9-piece-dining-set-review.png" height="125" width="125"/>
+                </div>
+                <div class="frame-content">
+                    <div class="frame-stars"></div>
+                    <div class="frame-title">Great set</div>
+                    <div class="frame-text">Love my new table</div>
+                    <div class="frame-author">- Malinda F</div>
+                </div>
+            </div>
+            <div class="frame flex flex-row">
+                <div class="frame-img flex-none">
+                    <img src="images/la-casa-cafe-3-piece-bar-set-review.png" height="125" width="125"/>
+                </div>
+                <div class="frame-content">
+                    <div class="frame-stars"></div>
+                    <div class="frame-title">Two thumbs up!</div>
+                    <div class="frame-text">We love our La Casa Cafe bar set! I got one for our screened in porch and one for outer deck and they're perfect!</div>
+                    <div class="frame-author">- Ginny H.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+  $(document).ready(function(){
+
+    var slides = 1;
+
+    if (window.matchMedia('(min-width: 1280px)').matches){
+      slides = 3;
+    }
+
+    $('.accordion dd:not(:first-of-type)').hide();
+    $('.accordion dt').on('click', function (e) {
+      e.preventDefault();
+      if($(this).hasClass('active')) {
+        $(this).removeClass('active');
+      } else {
+        $(this).addClass('active');
+      }
+      $(this).parent('dl').children('dd:visible').slideUp('slow');
+      $(this).nextUntil('dt').filter(':not(:visible)').slideDown('slow');
+    });
+
+    $('.slider').bxSlider({
+        pager: false,
+        minSlides: slides,
+        maxSlides: slides,
+        moveSlides: slides,
+        mode: 'horizontal',
+        captions: false,
+        slideWidth: 405
+    });
+  });
+</script>
+
 </body>
 </html>

@@ -1,0 +1,488 @@
+@font-face {
+    font-family: "GothamRounded";
+    src: url("/fonts/GothamRounded-Bold.otf") format("opentype"),
+    url("/fonts/GothamRoundedBold_21016.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GothamRoundedItalic";
+    src: url("/fonts/GothamRounded-BoldItalic.otf") format("opentype"),
+    url("/fonts/GothamRoundedBold_21016.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "GothamRounded";
+    src: url("/fonts/GothamRounded-Medium.otf") format("opentype"),
+    url("/fonts/GothamRoundedMedium_21022.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GothamRoundedItalic";
+    src: url("/fonts/GothamRounded-MediumItalic.otf") format("opentype"),
+    url("/fonts/GothamRoundedMedium_21022.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: "GothamRounded";
+    src: url("/fonts/GothamRounded-Book.otf") format("opentype"),
+    url("/fonts/GothamRoundedBook_21018.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GothamRoundedItalic";
+    src: url("/fonts/GothamRounded-BookItalic.otf") format("opentype"),
+    url("/fonts/GothamRoundedBook_21018.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "GothamRounded";
+    src: url("/fonts/GothamRounded-Light.otf") format("opentype"),
+    url("/fonts/GothamRoundedLight_21020.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GothamRoundedItalic";
+    src: url("/fonts/GothamRounded-LightItalic.otf") format("opentype"),
+    url("/fonts/GothamRoundedLight_21020.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+:root {
+    --pw-dark-grey: #4A4A4A;
+    --pw-light-gray: #F6F6F6;
+    --pw-text-grey: #55565A;
+
+    --pw-gotham-rounded: "GothamRounded", "sans-serif";
+    --pw-header-margin: min(6.171%, 79px);
+    --pw-font-size-body: 18px;
+    --pw-font-size-quote: 28px;
+    --pw-font-size-header: 30px;
+    --pw-font-size-small: 12px;
+    --pw-font-style-normal: normal;
+    --pw-font-style-italic: italic;
+    --pw-font-weight-light: 300;
+    --pw-font-weight-book: 400;
+    --pw-font-weight-medium: 600;
+    --pw-font-weight-bold: 700;
+    --pw-letter-spacing-header: 0.99px;
+    --pw-letter-spacing-body: 0.59px;
+    --pw-letter-spacing-quote-author: 0.92px;
+    --pw-line-height-body: 2.16em;
+    --pw-line-height-header: 1.2em;
+    --pw-gutter: 1em;
+    --pw-color-border: #707070;
+    --pw-text-transform-uppercase: uppercase;
+}
+
+.centered {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.icon {
+    width: 84px;
+    height: 84px;
+}
+
+section.content button {
+    text-transform: uppercase;
+    font-size: 19px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+section.content button.inverse {
+    font-size: 14px;
+    font-weight: var(--pw-font-weight-medium);
+    color: var(--pw-dark-grey);
+    letter-spacing: 1.02px;
+    padding: 24px;
+    border: 1px solid var(--pw-dark-grey);
+    border-radius: 5px;
+}
+
+button.white {
+    background-color: #F5F5F5;
+    color: var(--pw-dark-grey);
+}
+
+button.grey {
+    background-color: #6F6F6F;
+    color: #FFF;
+}
+
+button.black {
+    background-color: #2F2F2F;
+    color: #FFF;
+}
+
+button.rounded-sm {
+    font-size: 13px;
+    border: 1px solid var(--pw-color-border);
+}
+
+section.content {
+    color: var(--pw-dark-grey);
+    margin: 2rem auto;
+    padding: 0 var(--pw-gutter);
+    font-family: var(--pw-gotham-rounded);
+    max-width: 1280px;
+}
+
+section.content.inset {
+    background-color: var(--pw-light-gray);
+    padding: var(--pw-header-margin);
+}
+
+section.content.image-inset {
+    color: #FFF;
+}
+
+section.content .header-text {
+    display: flex;
+    flex-direction: row;
+    font-family: var(--pw-gotham-rounded);
+    font-weight: 600;
+    font-size: var(--pw-font-size-header);
+    line-height: var(--pw-line-height-header);
+    letter-spacing: var(--pw-letter-spacing-header);
+    text-transform: var(--pw-text-transform-uppercase);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 28px;
+}
+
+section.content .header-text:after, section.content .header-text:before {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid var(--pw-dark-grey);
+    margin: auto;
+}
+
+section.content .header-text:before {
+    margin-right: var(--pw-header-margin);
+}
+
+section.content .header-text:after {
+    margin-left: var(--pw-header-margin);
+}
+
+section.content .sub-header-text {
+    font-style: var(--pw-font-style-normal);
+    font-weight: var(--pw-font-weight-book);
+    font-size: var(--pw-font-size-header);
+    line-height: var(--pw-line-height-header);
+    letter-spacing: var(--pw-letter-spacing-header);
+    color: var(--pw-dark-grey);
+}
+
+section.content .bodycopy-text {
+    color: var(--pw-text-grey);
+    font-size: var(--pw-font-size-body);
+    line-height: var(--pw-line-height-body);
+    letter-spacing: var(--pw-letter-spacing-body);
+}
+
+section.content .quote-text {
+    color: var(--pw-text-grey);
+    font-size: var(--pw-font-size-quote);
+    font-style: var(--pw-font-style-italic);
+    font-weight: var(--pw-font-weight-book);
+    line-height: var(--pw-line-height-header);
+    letter-spacing: var(--pw-letter-spacing-header);
+    text-transform: none;
+}
+
+section.content .quote-author {
+    font-size: 28px;
+    font-weight: var(--pw-font-weight-medium);
+    letter-spacing: var(--pw-letter-spacing-quote-author);
+}
+
+section.content .quote-subject {
+    font-size: 13px;
+    font-weight: var(--pw-font-weight-book);
+    letter-spacing: 0.43px;
+}
+
+section.content .bodycopy-text a {
+    color: var(--pw-text-grey);
+}
+
+section.content .bodycopy-text p {
+    margin: 28px 0;
+}
+
+section.overview img {
+    width: 415px;
+}
+
+section.features div.centered {
+    margin-top: 27px;
+}
+
+section.features img {
+    background-color: var(--pw-text-grey);
+    border-radius: 50%;
+    border: 19px solid var(--pw-text-grey);
+    margin-bottom: 27px;
+}
+
+section.faqs dt {
+    border: 1px solid var(--pw-color-border);
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    font-style: var(--pw-font-style-italic);
+    font-weight: var(--pw-font-weight-book);
+    font-size: 21px;
+    line-height: 25px;
+    padding: var(--pw-gutter) 3em var(--pw-gutter) var(--pw-gutter);
+    text-decoration: underline;
+    margin-top: 32px;
+    position: relative;
+}
+
+dl.accordion dt.active {
+    background-color: var(--pw-light-gray);
+    text-decoration: none;
+}
+
+dl.accordion dt button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 16px;
+    right: 19px;
+    background-color: var(--pw-light-gray);
+    z-index: 1;
+    border-radius: 50%;
+}
+
+dl.accordion dt.active button {
+    background-color: #FFF;
+}
+
+dl.accordion button:before, section.faqs button:after {
+    position: absolute;
+    left: 18px;
+    top: 10px;
+    content: ' ';
+    height: 20px;
+    width: 3px;
+    background-color: var(--pw-text-grey);
+}
+
+dl.accordion button:before {
+    transform: rotate(0deg);
+}
+
+dl.accordion button:after {
+    transform: rotate(90deg);
+}
+
+dl.accordion dt.active button:before {
+    transform: rotate(45deg);
+}
+
+dl.accordion dt.active button:after {
+    transform: rotate(135deg);
+}
+
+dl.accordion dd {
+    display: none;
+    border: 1px solid var(--pw-color-border);
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+    padding: var(--pw-gutter);
+}
+
+dl.accordion dd:first-child {
+    display: block;
+}
+
+section.colors .swatch-set {
+    margin-top: 47px;
+}
+
+section.colors .col-auto {
+    position: relative;
+    padding-bottom: 80px;
+}
+
+section.colors button.cta {
+    position: absolute;
+    bottom: 0;
+}
+
+section.colors button.inverse {
+    margin-top: 34px;
+}
+
+section.types .subheader {
+    font-size: 30px;
+    font-weight: var(--pw-font-style-normal);
+    letter-spacing: var(--pw-letter-spacing-header);
+}
+
+section.types button.inverse {
+    margin-top: 42px;
+}
+
+section.ideas .sub-header-text, section.ideas p {
+    margin-top: 20px;
+}
+
+section.selection {
+    background-image: url("../images/Fall-Patio-Dining-Category-Header_compressed@2x.png");
+    background-size: auto;
+    height: 80vh;
+    padding: 0;
+}
+
+section.selection .wrapper {
+    backdrop-filter: blur(4px) brightness(80%);
+    height: 100%;
+    width: 100%;
+    padding: 0 var(--pw-gutter);
+}
+
+section.selection .header-text {
+    padding-top: 73px;
+}
+
+section.selection .header-text:after, section.selection .header-text:before {
+    border-bottom: 1px solid #FFF;
+}
+
+section.selection .sub-header-text {
+    color: #FFF;
+    font-size: var(--pw-font-size-body);
+}
+
+section.selection button.inverse {
+    background-color: #FFF;
+    border: 0;
+    margin-top: 35px;
+}
+
+section.reviews .sub-header-text {
+    font-size: var(--pw-font-size-body);
+    margin-bottom: 33px;
+}
+
+section.reviews .frame-stars {
+    display: inline-block;
+    width: 94px;
+    height: 16px;
+    background-image: url("../images/icons/star-5.png");
+}
+
+section.reviews .frame {
+    position: relative;
+}
+
+section.reviews .frame-content {
+    margin: 0 20px;
+}
+
+section.reviews .frame-title {
+    margin-top: 6px;
+    font-size: var(--pw-font-size-body);
+    font-weight: var(--pw-font-weight-medium);
+}
+
+section.reviews .frame-text, section.reviews .frame-author {
+    font-size: var(--pw-font-size-small);
+    font-weight: var(--pw-font-weight-book);
+}
+
+section.reviews .frame-author {
+    position: absolute;
+    bottom: 0;
+    font-style: italic;
+}
+
+section.reviews .bx-wrapper .bx-prev {
+    left: -10px;
+    width: 23px;
+    height: 46px;
+    background: url("../images/bxslider-chevron-arrow.svg") no-repeat 0 -32px;
+}
+
+section.reviews .bx-wrapper .bx-next {
+    right: -10px;
+    width: 23px;
+    height: 46px;
+    background: url("../images/bxslider-chevron-arrow.svg") no-repeat -43px -32px;
+}
+
+/* TODO */
+section.reviews .bx-wrapper .bx-prev, section.reviews .bx-wrapper .bx-next {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    section.content {
+        margin: 4.375rem auto 0;
+    }
+
+    section.content .bodycopy-text p {
+        margin: 0 0 var(--pw-line-height-body);
+    }
+
+    section.content.inset {
+        background-color: var(--pw-light-gray);
+        padding: 5.1em 3.4em;
+    }
+
+    section.testimonial .quote {
+        margin: 0 54px 0 0;
+    }
+
+    button.inverse {
+        max-width: 469px;
+    }
+
+    section.types .wrapper {
+        grid-template-columns: fit-content(280px) 1fr;
+    }
+
+    section.selection {
+        height: 363px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+
+    section.content {
+        padding: 0 var(--pw-gutter);
+    }
+
+    section.content.overview img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    section.content.overview img {
+        width: 426px;
+        height: 515px;
+        margin-right: 39.5px;
+    }
+
+}
