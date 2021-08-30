@@ -2,7 +2,7 @@
 <head>
     <title>PW</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -12,7 +12,7 @@
 <section class="content xl:container overview">
     <h2 class="header-text">Why Polywood?</h2>
     <div class="wrapper flex flex-col md:flex-row">
-        <div class="flex-none">
+        <div class="flex-auto lg:flex-none img-container">
             <img src="images/PWS433-1-WH-LI.png" alt="Polywood Outdoor Set" />
         </div>
         <div class="bodycopy-text flex-grow">
@@ -34,9 +34,9 @@
     </div>
 </section>
 
-<section class="content xl:container inset testimonial">
-    <div class="wrapper flex flex-col lg:flex-row">
-        <div class="quote centered flex-grow">
+<section class="content xl:container testimonial">
+    <div class="wrapper flex flex-col md:flex-row">
+        <div class="quote centered inset flex-grow">
             <div class="quote-text">
                 <p>&ldquo;The customer service is excellent. I would receive an email throughout, giving me the status.
                     Then I needed to change my delivery address and the lady who helped me was prompt and efficient
@@ -52,7 +52,7 @@
         </div>
 
         <div class="img-container flex-none">
-            <img src="images/PWS121-1-GY-LI-1.png" />
+            <img alt="La Casa Caf&eacute; 5-Piece Dining Set" src="images/la-casa-cafe-5-piece-dining-set-review.png" height="365" width="365" />
         </div>
     </div>
 </section>
@@ -61,22 +61,22 @@
     <h2 class="header-text">Outdoor Dining Set Features</h2>
     <div class="wrapper grid lg:grid-cols-2 lg:grid-rows-2 sm:grid-cols-1 lg:gap-16">
         <div class="centered">
-            <img class="centered icon" src="images/icons/WeatherResistance-White-1.png"/>
+            <img class="centered icon" alt="Weather Resistance" src="images/icons/WeatherResistance-White-1.png" />
             <h3 class="sub-header-text">Weather Resistance</h3>
             <p>Our genuine POLYWOOD lumber can handle all types of weather from hot desert heat to the most frigid blizzards.</p>
         </div>
         <div class="centered">
-            <img class="centered icon" src="images/icons/LowMaintenance-White.png"/>
+            <img class="centered icon" alt="Low Maintenance" src="images/icons/LowMaintenance-White.png"/>
             <h3 class="sub-header-text">Low Maintenance</h3>
             <p>All POLYWOOD furniture is easy to clean and never needs to be painted, stained, or waterproofed.</p>
         </div>
         <div class="centered">
-            <img class="centered icon" src="images/icons/path16.png"/>
+            <img class="centered icon" alt="Durabiity" src="images/icons/path16.png"/>
             <h3 class="sub-header-text">Durability</h3>
             <p>We proudly back our genuine POLYWOOD lumber with a 20-year residential warranty.</p>
         </div>
         <div class="centered">
-            <img class="centered icon" src="images/icons/Recycled-White.png"/>
+            <img class="centered icon" alt="Sustainability" src="images/icons/Recycled-White.png"/>
             <h3 class="sub-header-text">Sustainability</h3>
             <p>We give ocean-bound and landfill-bound plastic containers a second life by recycling them into our genuine POLYWOOD lumber.</p>
         </div>
@@ -111,8 +111,8 @@
     </div>
 </section>
 
-<section class="content xl:container inset testimonial">
-    <img class="lg:float-left lg:pr-10 centered" src="images/edge-7-piece-dining-set-review.png" height="235" width="235" />
+<section class="content xl:container inset testimonial-left">
+    <img class="lg:float-left lg:pr-10 centered" src="images/edge-7-piece-dining-set-review.png" alt="Edge 7-Piece Dining Set" height="235" width="235" />
     <div class="quote centered">
         <div class="quote-text">
             <p>&ldquo;Looks fantastic. Love the modern lines. Had my first socially distanced gathering and it was
@@ -136,19 +136,19 @@
     </div>
     <div class="grid md:grid-cols-3 gap-20">
         <div class="col-auto">
-            <img src="images/white.png" height="291" width="364"/>
+            <img src="images/white.png" alt="White Dining Sets" height="291" width="364"/>
             <button class="white cta">
                 <a href="#">Shop White Dining Sets</a>
             </button>
         </div>
         <div class="col-auto">
-            <img src="images/PWS260-1-GY-ST.png" height="292" width="412"/>
+            <img src="images/PWS260-1-GY-ST.png" alt="Slate Grey Dining Sets" height="292" width="412"/>
             <button class="grey cta">
                 <a href="#">Shop Slate Grey Dining Sets</a>
             </button>
         </div>
         <div class="col-auto">
-            <img src="images/PWS340-1-BL-ST.png" height="291" width="364"/>
+            <img src="images/PWS340-1-BL-ST.png" alt="Black Dining Sets" height="291" width="364"/>
             <button class="black cta">
                 <a href="#">Shop Black Dining Sets</a>
             </button>
@@ -156,7 +156,7 @@
     </div>
     <div class="row">
         <div class="swatch-set">
-            <img class="centered" src="images/Repeat Grid 34.png" />
+            <img class="centered" src="images/Repeat Grid 34.png" alt="Swatch Set" />
         </div>
     </div>
     <div class="row centered">
@@ -168,31 +168,31 @@
 
 <section class="content xl:container ideas">
     <h2 class="header-text">Where to Enjoy Your Outdoor Dining Sets</h2>
-    <div class="wrapper grid lg:grid-cols-3 gap-14">
+    <div class="wrapper grid md:grid-cols-3 gap-14">
         <div class="col-auto">
-            <img src="images/PWS121-1-GY-LI-1.png" height="298" width="397"/>
+            <img src="images/PWS121-1-GY-LI-1.png" alt="On the Patio" height="298" width="397"/>
             <div class="sub-header-text">On the Patio</div>
             <p>The perks of <a href="#">patio dining</a> are plentiful, and using one of our patio dining sets, such as the <a href="#">Chippendale 7-Piece Dining Set</a>, in your space is one of them.</p>
         </div>
         <div class="col-auto">
-            <img src="images/PWS261-1-WH-LI-1.png" height="298" width="397"/>
+            <img src="images/PWS261-1-WH-LI-1.png" alt="By the Pool" height="298" width="397"/>
             <div class="sub-header-text">By the Pool</div>
             <p>Mixing margaritas can be even more enjoyable when you sit back and relax in one of our bar sets poolside such as the <a href="#">Palm Coast 5-Piece Bar Set.</a></p>
         </div>
         <div class="col-auto">
-            <img src="images/PWS156-1-SA902-LI-1.png" height="298" width="397"/>
+            <img src="images/PWS156-1-SA902-LI-1.png" alt="On the Front Porch" height="298" width="397"/>
             <div class="sub-header-text">On the Front Porch</div>
-            <p>A cozy spot on your porch can fit a smaller dining set, such as the <a href="#">Coastal 3-Piece Bar Set</a>, so you can enjoy an intimate meal with your friends.</div>
+            <p>A cozy spot on your porch can fit a smaller dining set, such as the <a href="#">Coastal 3-Piece Bar Set</a>, so you can enjoy an intimate meal with your friends.</p>
         </div>
     </div>
 </section>
 
 <section class="content xl:container types">
     <h2 class="header-text">Types of Outdoor Dining Sets</h2>
-    <div class="wrapper grid sm:grid-cols-1 lg:grid-cols-2 gap-16">
+    <div class="wrapper grid sm:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16">
 
         <div class="col-auto">
-            <img class="centered" src="images/PWS374-1-VWH-UMB-LI.png" height="224" width="280"/>
+            <img class="centered" src="images/PWS374-1-VWH-UMB-LI.png" alt="Outdoor Dining Set with Umbrella" height="224" width="280"/>
         </div>
         <div class="col-auto">
             <div class="subheader">Outdoor Dining Set with Umbrella</div>
@@ -200,7 +200,7 @@
         </div>
 
         <div class="col-auto">
-            <img class="centered" src="images/PWS122-1-WH-LI-1 (1).png" height="224" width="280"/>
+            <img class="centered" src="images/PWS122-1-WH-LI-1 (1).png" alt="Round Outdoor Dining Sets" height="224" width="280"/>
         </div>
         <div class="col-auto">
             <div class="subheader">Round Outdoor Dining Sets</div>
@@ -208,7 +208,7 @@
         </div>
 
         <div class="col-auto">
-            <img class="centered" src="images/PWS379-1-TE-SI-9.png" height="223" width="280"/>
+            <img class="centered" src="images/PWS379-1-TE-SI-9.png" alt="Bar-Height Outdoor Dining Set" height="223" width="280"/>
         </div>
         <div class="col-auto">
             <div class="subheader">Bar-Height Outdoor Dining Set</div>
@@ -216,7 +216,7 @@
         </div>
 
         <div class="col-auto">
-            <img class="centered" src="images/PWS508-1-VSH-LI (1).png" height="224" width="280"/>
+            <img class="centered" src="images/PWS508-1-VSH-LI (1).png" alt="Outdoor Dining Set with Bench" height="224" width="280"/>
         </div>
         <div class="col-auto">
             <div class="subheader">Outdoor Dining Set with Bench</div>
@@ -224,7 +224,7 @@
         </div>
 
         <div class="col-auto">
-            <img class="centered" src="images/PWS132-1-WH-LI-2.png" height="224" width="280"/>
+            <img class="centered" src="images/PWS132-1-WH-LI-2.png" alt="Small Outdoor Dining Set" height="224" width="280"/>
         </div>
         <div class="col-auto">
             <div class="subheader">Small Outdoor Dining Set</div>
@@ -232,7 +232,7 @@
         </div>
 
         <div class="col-auto">
-            <img class="centered" src="images/PWS153-1-GY-LI-1 (2).png" height="223" width="280"/>
+            <img class="centered" src="images/PWS153-1-GY-LI-1 (2).png" alt="Outdoor Bistro Dining Set" height="223" width="280"/>
         </div>
         <div class="col-auto">
             <div class="subheader">Outdoor Bistro Dining Set</div>
@@ -266,7 +266,7 @@
         <div class="slider">
             <div class="frame flex flex-row">
                 <div class="frame-img flex-none">
-                    <img src="images/lakeside-7-piece-farmhouse-dining-set-review.png" height="125" width="125"/>
+                    <img src="images/lakeside-7-piece-farmhouse-dining-set-review.png" alt="Great Set Review" height="125" width="125"/>
                 </div>
                 <div class="frame-content">
                     <div class="frame-stars"></div>
@@ -277,7 +277,7 @@
             </div>
             <div class="frame flex flex-row">
                 <div class="frame-img flex-none">
-                    <img src="images/vineyard-9-piece-dining-set-review.png" height="125" width="125"/>
+                    <img src="images/vineyard-9-piece-dining-set-review.png" alt="Great Set Review" height="125" width="125"/>
                 </div>
                 <div class="frame-content">
                     <div class="frame-stars"></div>
@@ -288,7 +288,7 @@
             </div>
             <div class="frame flex flex-row">
                 <div class="frame-img flex-none">
-                    <img src="images/la-casa-cafe-3-piece-bar-set-review.png" height="125" width="125"/>
+                    <img src="images/la-casa-cafe-3-piece-bar-set-review.png" alt="Two Thumbs Up Review" height="125" width="125"/>
                 </div>
                 <div class="frame-content">
                     <div class="frame-stars"></div>
@@ -304,10 +304,17 @@
 <script>
   $(document).ready(function(){
 
-    var slides = 1;
+    var slides = 1,
+        slidewidth = 300;
 
-    if (window.matchMedia('(min-width: 1280px)').matches){
+    if (window.matchMedia('(min-width: 1280px)').matches) {
       slides = 3;
+      slidewidth = 405;
+    }
+
+    if (window.matchMedia('(device-width: 768px)').matches) {
+      slides = 2;
+      slidewidth = 340;
     }
 
     $('.accordion dd:not(:first-of-type)').hide();
@@ -315,21 +322,23 @@
       e.preventDefault();
       if($(this).hasClass('active')) {
         $(this).removeClass('active');
+        $(this).nextUntil('dt').filter(':visible').slideUp('fast');
       } else {
         $(this).addClass('active');
+        $(this).nextUntil('dt').filter(':not(:visible)').slideDown('fast');
       }
-      $(this).parent('dl').children('dd:visible').slideUp('slow');
-      $(this).nextUntil('dt').filter(':not(:visible)').slideDown('slow');
     });
 
     $('.slider').bxSlider({
         pager: false,
+        nextText: '',
+        prevText: '',
         minSlides: slides,
         maxSlides: slides,
         moveSlides: slides,
         mode: 'horizontal',
         captions: false,
-        slideWidth: 405
+        slideWidth: slidewidth
     });
   });
 </script>

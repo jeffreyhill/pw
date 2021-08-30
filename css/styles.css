@@ -64,6 +64,7 @@
     --pw-header-margin: min(6.171%, 79px);
     --pw-font-size-body: 18px;
     --pw-font-size-quote: 28px;
+    --pw-font-size-quote-sm: 19px;
     --pw-font-size-header: 30px;
     --pw-font-size-small: 12px;
     --pw-font-style-normal: normal;
@@ -74,12 +75,15 @@
     --pw-font-weight-bold: 700;
     --pw-letter-spacing-header: 0.99px;
     --pw-letter-spacing-body: 0.59px;
+    --pw-letter-spacing-quote: 0.92px;
     --pw-letter-spacing-quote-author: 0.92px;
     --pw-line-height-body: 2.16em;
     --pw-line-height-header: 1.2em;
+    --pw-line-height-quote: 1.388em;
     --pw-gutter: 1em;
     --pw-color-border: #707070;
     --pw-text-transform-uppercase: uppercase;
+    --pw-icon-size: 84px;
 }
 
 .centered {
@@ -88,12 +92,12 @@
 }
 
 .icon {
-    width: 84px;
-    height: 84px;
+    width: var(--pw-icon-size);
+    height: var(--pw-icon-size);
 }
 
 section.content button {
-    text-transform: uppercase;
+    text-transform: var(--pw-text-transform-uppercase);
     font-size: 19px;
     text-align: center;
     width: 100%;
@@ -196,11 +200,11 @@ section.content .bodycopy-text {
 
 section.content .quote-text {
     color: var(--pw-text-grey);
-    font-size: var(--pw-font-size-quote);
+    font-size: var(--pw-font-size-quote-sm);
     font-style: var(--pw-font-style-italic);
     font-weight: var(--pw-font-weight-book);
-    line-height: var(--pw-line-height-header);
-    letter-spacing: var(--pw-letter-spacing-header);
+    line-height: var(--pw-line-height-quote);
+    letter-spacing: var(--pw-letter-spacing-quote);
     text-transform: none;
 }
 
@@ -224,8 +228,18 @@ section.content .bodycopy-text p {
     margin: 28px 0;
 }
 
-section.overview img {
-    width: 415px;
+section.overview .img-container {
+    min-width: 33%;
+}
+
+section.testimonial .quote {
+    order: 2;
+    background-color: var(--pw-light-gray);
+    padding: var(--pw-gutter);
+}
+
+section.testimonial .img-container {
+    order: 1;
 }
 
 section.features div.centered {
@@ -239,9 +253,13 @@ section.features img {
     margin-bottom: 27px;
 }
 
+section.features p {
+    line-height: 1.75em;
+}
+
 section.faqs dt {
     border: 1px solid var(--pw-color-border);
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px;
     cursor: pointer;
     font-style: var(--pw-font-style-italic);
     font-weight: var(--pw-font-weight-book);
@@ -256,6 +274,7 @@ section.faqs dt {
 dl.accordion dt.active {
     background-color: var(--pw-light-gray);
     text-decoration: none;
+    border-radius: 5px 5px 0 0;
 }
 
 dl.accordion dt button {
@@ -263,11 +282,12 @@ dl.accordion dt button {
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 16px;
+    top: 17px;
     right: 19px;
     background-color: var(--pw-light-gray);
     z-index: 1;
     border-radius: 50%;
+    padding: 0;
 }
 
 dl.accordion dt.active button {
@@ -276,11 +296,11 @@ dl.accordion dt.active button {
 
 dl.accordion button:before, section.faqs button:after {
     position: absolute;
-    left: 18px;
-    top: 10px;
+    left: 14px;
+    top: 8px;
     content: ' ';
-    height: 20px;
-    width: 3px;
+    height: 14px;
+    width: 2px;
     background-color: var(--pw-text-grey);
 }
 
@@ -306,10 +326,23 @@ dl.accordion dd {
     border-top: 0;
     border-radius: 0 0 5px 5px;
     padding: var(--pw-gutter);
+    line-height: var(--pw-line-height-body);
 }
 
 dl.accordion dd:first-child {
     display: block;
+}
+
+section.content.testimonial-left {
+    padding: 2.063em 3.438em 2.75em 3.250em;
+}
+
+section.content.testimonial-left .quote {
+    margin-top: 24px;
+}
+
+section.colors p {
+    line-height: 30px;
 }
 
 section.colors .swatch-set {
@@ -318,7 +351,7 @@ section.colors .swatch-set {
 
 section.colors .col-auto {
     position: relative;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 }
 
 section.colors button.cta {
@@ -336,12 +369,29 @@ section.types .subheader {
     letter-spacing: var(--pw-letter-spacing-header);
 }
 
+section.types .bodycopy-text {
+    font-size: 16px;
+    line-height: 30px;
+}
+
 section.types button.inverse {
     margin-top: 42px;
 }
 
+section.ideas .sub-header-text {
+    font-size: 24px;
+}
+
 section.ideas .sub-header-text, section.ideas p {
     margin-top: 20px;
+}
+
+section.ideas p {
+    line-height: 30px;
+}
+
+section.ideas p a {
+    text-decoration: underline;
 }
 
 section.selection {
@@ -375,6 +425,10 @@ section.selection button.inverse {
     background-color: #FFF;
     border: 0;
     margin-top: 35px;
+}
+
+section.reviews {
+    margin-bottom: 20px;
 }
 
 section.reviews .sub-header-text {
@@ -414,22 +468,50 @@ section.reviews .frame-author {
     font-style: italic;
 }
 
+section.reviews .bx-wrapper {
+    position: relative;
+    margin: 0 auto;
+}
+
+section.reviews .bx-controls {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 125px;
+    width: 100%;
+}
+
 section.reviews .bx-wrapper .bx-prev {
-    left: -10px;
-    width: 23px;
-    height: 46px;
-    background: url("../images/bxslider-chevron-arrow.svg") no-repeat 0 -32px;
+    content: '';
+    display: block;
+    position: absolute;
+    background: url("../images/bxslider-chevron-arrow.svg") no-repeat;
+    transform: rotate(180deg);
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    left: -40px;
+    top: 42px;
 }
 
 section.reviews .bx-wrapper .bx-next {
-    right: -10px;
-    width: 23px;
-    height: 46px;
-    background: url("../images/bxslider-chevron-arrow.svg") no-repeat -43px -32px;
+    content: '';
+    display: block;
+    position: absolute;
+    background: url("../images/bxslider-chevron-arrow.svg") no-repeat;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    right: -40px;
+    top: 42px;
 }
 
-/* TODO */
-section.reviews .bx-wrapper .bx-prev, section.reviews .bx-wrapper .bx-next {
+section.reviews .bx-controls-direction {
+    display: block;
+    position: relative;
+}
+
+section.reviews .bx-wrapper .bx-prev.disabled, section.reviews .bx-wrapper .bx-next.disabled {
     display: none;
 }
 
@@ -443,13 +525,9 @@ section.reviews .bx-wrapper .bx-prev, section.reviews .bx-wrapper .bx-next {
         margin: 0 0 var(--pw-line-height-body);
     }
 
-    section.content.inset {
+    section.content .inset {
         background-color: var(--pw-light-gray);
-        padding: 5.1em 3.4em;
-    }
-
-    section.testimonial .quote {
-        margin: 0 54px 0 0;
+        padding: 1.938em;
     }
 
     button.inverse {
@@ -457,7 +535,19 @@ section.reviews .bx-wrapper .bx-prev, section.reviews .bx-wrapper .bx-next {
     }
 
     section.types .wrapper {
-        grid-template-columns: fit-content(280px) 1fr;
+        grid-template-columns: fit-content(310px) 1fr;
+    }
+
+    section.types .col-auto:nth-child(odd) {
+        padding-left: 30px;
+    }
+
+    section.types .col-auto:nth-child(even) {
+        padding-right: 60px;
+    }
+
+    section.colors .wrapper {
+        padding: 0 3.250em;
     }
 
     section.selection {
@@ -465,10 +555,57 @@ section.reviews .bx-wrapper .bx-prev, section.reviews .bx-wrapper .bx-next {
     }
 }
 
+@media screen and (min-width: 769px) {
+
+    section.testimonial .quote {
+        order: 1;
+    }
+
+    section.testimonial .img-container {
+        order: 2;
+    }
+
+    section.content .quote-text {
+        font-size: var(--pw-font-size-quote);
+    }
+
+    section.types .bodycopy-text {
+        font-size: 18px;
+    }
+
+    section.reviews .bx-controls-direction {
+        width: 100%;
+        height: 100%;
+    }
+
+    section.reviews .bx-wrapper .bx-prev {
+        width: 46px;
+        height: 46px;
+        left: -46px;
+        top: 40px;
+    }
+
+    section.reviews .bx-wrapper .bx-next {
+        width: 46px;
+        height: 46px;
+        right: -46px;
+        top: 40px;
+    }
+
+}
+
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+
+    section.overview .img-container {
+        padding-right: 28px;
+    }
 
     section.content {
         padding: 0 var(--pw-gutter);
+    }
+
+    section.content.image-inset {
+        padding: 0;
     }
 
     section.content.overview img {
